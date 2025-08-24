@@ -1,1 +1,1 @@
-web: cd tecsec && python manage.py migrate && gunicorn tecsec.wsgi:application --bind 0.0.0.0:$PORT
+web: python manage.py migrate && gunicorn tecsec.wsgi:application --bind 0.0.0.0:$PORT
