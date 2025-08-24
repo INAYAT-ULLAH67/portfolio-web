@@ -38,3 +38,26 @@ def contact(request):
 
 def projects(request):
     return render(request, "projects.html")
+# Add this to your views.py
+def check_database(request):
+    from django.db import connection
+    from django.http import JsonResponse
+    
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT version();")
+            version = cursor.fetchone()
+            cursor.execute("SELECT current_database();")
+            db_name = cursor.fetchone()
+            return JsonResponse({
+                'status': 'success',
+                'database_version': version[0],
+                'database_name': db_name[0],
+                'using_postgres': 'postgresql' in connection.settings_dict['ENGINE']
+            })
+    except Exception as e:
+        return JsonResponse({
+            'status': 'error',
+            'message': str(e),
+            'database_engine': connection.settings_dict['ENGINE'] if 'ENGINE' in connection.settings_dict else 'unknown'
+        })
