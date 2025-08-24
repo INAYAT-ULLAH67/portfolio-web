@@ -71,15 +71,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tecsec.wsgi.application'
 # Database configuration - Simplified
+# Database configuration
+import os
+import dj_database_url
+
 DATABASE_URL = os.environ.get('DATABASE_URL')
+
 if DATABASE_URL:
-    # Use the DATABASE_URL from environment (Railway provides this)
+    # Convert postgres:// to postgresql:// if needed
+    if DATABASE_URL.startswith('postgres://'):
+        DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://', 1)
+    
     DATABASES = {
         'default': dj_database_url.parse(
             DATABASE_URL, 
-            conn_max_age=600, 
+            conn_max_age=600,
             conn_health_checks=True,
-            ssl_require=True  # Force SSL for Railway
+            ssl_require=True
         )
     }
 else:
