@@ -1,0 +1,549 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('backgroun-2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 1025px){
+    .about-profile {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-picture {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        border: 5px solid transparent;
+        box-shadow: 0 0 0 5px #001f3f;
+        flex-shrink: 0;
+    }
+
+    .introduction {
+        margin-top: 50px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .introduction-text {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin: 0 0;
+    }
+
+    .section-title {
+        position: relative;
+        left: -40px;
+        color: #4da6ff;
+        font-size: 2rem;
+        /*margin-bottom: 0;*/
+        margin-top: 0;
+    }
+
+    .my-name {
+        position: relative;
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 20px;
+        text-align: center;
+        color: white;
+        border: 2px solid gold;
+        border-radius: 8px;
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+        animation: edgeLightning 1.5s infinite alternate;
+        width: 500px;
+    }
+
+    /*skill section */
+    .skills-section {
+        display: flex;
+        /*padding: 20px;*/
+        justify-content: space-between;
+    }
+
+
+    .skills-container {
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+    }
+
+    .skill-card {
+        color: lightgoldenrodyellow;
+        font-size: 20px;
+        font-weight: bolder;
+        width: 300px;
+        margin-bottom: 13px;
+    }
+
+
+/*    navbar*/
+    /**navbar*!*/
+    .navbar {
+        display: flex;
+        background-color: black;
+        height: 65px;
+        justify-content: space-between;
+    }
+
+    .myname {
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row; /* default */
+        gap: 45px;
+        padding-right: 40px;
+        align-items: center;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.125rem;
+        transition: color 0.3s ease;
+    }
+
+
+    .menu a:hover {
+        color: #00bfff;
+    }
+    .education-list {
+        list-style: none;
+        padding: 0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: white;
+    }
+
+    .education-list li {
+        margin-bottom: 20px;
+    }
+    .section-title2 ,.skills-heading{
+        color: white;
+        position: relative;
+        border: 2px solid gold;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+        animation: edgeLightning 1.5s infinite alternate;
+        width: 400px;
+    }
+    .career-objective{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .career-objective-text {
+        position: relative;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.6;
+        word-spacing: 4px; /* Adjust the value as needed */
+        width: 1000px;
+        left: 90px;
+
+    }
+
+    .section-title1 ,.section-title3 {
+        position: relative;
+        color: #4da6ff;
+        font-size: 3rem;
+        display: inline-block;
+        padding-bottom: 8px;
+        background-image: linear-gradient(to right, gold, orange);
+        background-repeat: no-repeat;
+        background-size: 100% 4px;
+        background-position: 0 100%;
+    }
+
+    .skill-card:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    }
+   .education-section{
+       flex-grow: 2;
+   }
+
+
+
+
+
+
+}
+/* for ipad */
+/*for iPad */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .about-profile {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+        height: 500px;
+    }
+
+    .about-picture {
+        margin-top: 4px;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        margin-bottom: 0;
+        border: #00acee solid 2px;
+        align-self: center;
+    }
+    .my-name {
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+        animation: edgeLightning 1.5s infinite alternate;
+        width: 300px;
+        align-self: center;
+        position: relative;
+        right: -80px;
+        color: white;
+        top: 100px;
+    }
+
+    .section-title {
+        position: relative;
+        color: white;
+        font-size: 25px;
+        margin-bottom: 0;
+        top: 100px;
+    }
+
+    .introduction-text {
+        position: relative;
+        left: 5px;
+        top: 100px;
+        color: floralwhite;
+        font-weight: bold;
+        line-height: 1.7;
+    }
+
+    .skills-section {
+        position: relative;
+        top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        width: 100%; /* or try max-width: 700px */
+    }
+    .skills, .education-section {
+        flex: 1 1 300px; /* allows them to shrink/grow */
+        max-width: 320px;
+    }
+
+    /*.section-title2*/
+    /*education section styling*/
+    .skills-heading ,.section-title2{
+        position: relative;
+        margin-bottom: 0;
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+        text-align: center;
+        color: white;
+    }
+    .education-list {
+        list-style: none;
+        padding: 0;
+        font-size: 13px;
+        line-height: 1.6;
+        color: white;
+    }
+
+    .education-list li {
+        margin-bottom: 20px;
+    }
+    .education-list li strong{
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: yellowgreen;
+        text-decoration-thickness: 2px;
+    }
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding-top: 10px;
+        gap: 8px;
+    }
+
+    .skill-card {
+        color: white;
+        text-shadow: 1px 2px 4px yellowgreen;
+        margin-bottom: 10px;
+    }
+    .skill-card:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+
+    }
+    .navbar {
+        display: flex;
+        background-color: black;
+        height: 65px;
+        justify-content: space-between;
+    }
+
+    .myname {
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        gap: 45px;
+        padding-right: 40px;
+        align-items: center;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.125rem;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+        color: #00bfff;
+    }
+
+
+    .section-title1 ,.section-title3{
+        position: relative;
+        color: #4da6ff;
+        font-size: 2rem;
+        display: inline-block;
+        padding-bottom: 8px;
+        background-image: linear-gradient(to right, gold, orange);
+        background-repeat: no-repeat;
+        background-size: 100% 4px;
+        background-position: 0 100%;
+    }
+    .career-objective-text {
+        position: relative;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.6;
+        word-spacing: 4px; /* Adjust the value as needed */
+        width: 700px;
+        left: 50px;
+    }
+
+}
+/* for mobile */
+
+/* Mobile landscape (up to 768px) */
+@media (max-width: 768px) {
+    .about-profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-picture {
+        margin-top: 4px;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        /*margin-bottom: 0;*/
+        border: #00acee solid 2px;
+        align-self: center;
+    }
+
+    .section-title {
+        color: antiquewhite;
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+
+
+    .my-name {
+        color: white;
+        font-size: 28px;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: gold;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 10px;
+        letter-spacing: 1px;
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+        transition: all 0.3s ease;
+        padding: 10px 20px;
+        border: 2px solid gold;
+        border-radius: 8px;
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+        animation: edgeLightning 1.5s infinite alternate;
+    }
+
+    .introduction-text {
+        color: white;
+        height: auto; /* More flexible */
+        /*font-weight: bold;*/
+        background: linear-gradient(to right, rebeccapurple, #2a5298);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        text-align: justify;
+        padding: 20px; /* 👈 Adds space inside the box */
+        margin: 10px;  /* Optional: separates from other elements */
+    }
+
+
+    .skills-heading,.section-title2 ,.section-title1,.section-title3{
+        text-align: center;
+        width: 250px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(to right,black,yellow);
+        border: 2px solid gold;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+    }
+
+    .skills-heading:hover,
+    .section-title1:hover,
+    .section-title2:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 5%;
+    }
+
+    .education-list {
+        list-style: none;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: white;
+        background: linear-gradient(to right, rebeccapurple, #2a5298);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        text-align: justify;
+        padding: 20px; /* 👈 Adds space inside the box */
+        /*margin: 10px;  !* Optional: separates from other elements *!*/
+        margin-bottom: 50px;
+    }
+
+    .education-list li {
+        margin-bottom: 20px;
+        position: relative;
+        left: 2px;
+        /*height: 300px;*/
+        /*text-decoration: underline;*/
+    }
+    .education-list li strong{
+        color: yellowgreen;
+        text-decoration: underline;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, rebeccapurple, #2a5298);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        text-align: justify;
+        padding: 20px; /* 👈 Adds space inside the box */
+        margin: 10px;  /* Optional: separates from other elements */
+    }
+
+    /*    navbar  */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 9px;
+        padding: 0;
+        justify-content: flex-end;
+        flex: 1;
+        align-items: center;
+    }
+
+    .menu a {
+        position: relative;
+        white-space: nowrap;
+        font-size: 0.95rem;
+        padding: 8px 10px;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    .menu a:hover {
+        color: #00bfff;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        transform: scale(1.05);
+    }
+
+    .myname {
+        position: relative;
+        font-size: 16px;
+        color: white;
+        margin-top: 7px;
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+    .skill-card {
+        color: white;
+        text-shadow: 1px 2px 4px yellowgreen;
+    }
+   .skill-card:hover{
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+
+   }
+
+
+    .career-objective-text {
+         position: relative;
+         height: auto; /* More flexible for mobile */
+         padding: 20px;
+         color: white;
+         background: linear-gradient(to right, rebeccapurple, #2a5298); /* Optional background */
+         border-radius: 8px;
+         box-shadow: 0 4px 12px rgba(0.6, 0, 0, 0.5);
+         text-align: justify;
+     }
+
+}
+
+
