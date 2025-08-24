@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'tecsec.wsgi.application'
 import os
 import dj_database_url
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
+# Database configuration
+import os
+import dj_database_url
 
+DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
     # Convert postgres:// to postgresql:// if needed
     if DATABASE_URL.startswith('postgres://'):
@@ -91,14 +94,12 @@ if DATABASE_URL:
         )
     }
 else:
-    # Fallback to SQLite for local development
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
