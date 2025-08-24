@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <title>About-Page</title>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="myname">.Inayat</div>
+        <div class="menu">
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'about' %}" target="_blank" rel="noopener noreferrer">About</a>
+            <a href="{% url 'contact' %}" target="_blank" rel="noopener noreferrer">Contact</a>
+            <a href="{% url 'projects' %}" target="_blank" rel="noopener noreferrer">Projects</a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="about-profile">
+        <img src="{% static 'about.png' %}" alt="personal-picture" class="about-picture">
+
+        <div class="introduction">
+            <h2 class="section-title">ABOUT ...</h2>
+            <h1 class="my-name">Inayat Ullah</h1>
+            <p class="introduction-text">
+                I'm an undergraduate Computer Engineering student at NED University of Engineering and Technology, passionate about backend logic and creative front-end design. I enjoy building responsive layouts, experimenting with CSS effects, and solving subtle code challenges that bring ideas to life. Alongside my coursework, I’ve earned a certificate of appreciation in Basic Electronics and Arduino, and completed the full JavaScript video series by Apna College on YouTube. I also have hands-on experience with C programming, especially through Arduino-based projects.
+            </p>
+        </div>
+    </div>
+
+    <div class="career-objective">
+        <h2 class="section-title1">🎯 Mission Statement</h2>
+        <div class="career-objective-text">
+            <p>
+                To become a highly skilled Computer Systems Engineer, combining deep technical expertise with creative problem-solving to design efficient, scalable, and user-friendly systems. I aim to contribute to innovative projects that bridge hardware and software, while continuously expanding my knowledge in backend development, responsive design, and embedded systems.
+            </p>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <div class="skills">
+            <h2 class="skills-heading">Technical Skills</h2>
+            <ul class="skills-container">
+                <li class="skill-card">C/C++</li>
+                <li class="skill-card">JavaScript</li>
+                <li class="skill-card">Arduino</li>
+                <li class="skill-card">HTML/CSS</li>
+                <li class="skill-card">Backend Development</li>
+                <li class="skill-card">Responsive Design</li>
+            </ul>
+        </div>
+
+        <div class="education-section">
+            <h2 class="section-title2">Academic Background</h2>
+            <ul class="education-list">
+                <li>
+                    <strong>Matriculation:</strong> 91.54% (Completed 2022)
+                    <em>Board of Intermediate and Secondary Education, Kohat</em>
+                </li>
+                <li>
+                    <strong>Intermediate (Pre-Engineering):</strong> 82.2% (Completed 2024)
+                    <em>Board of Intermediate and Secondary Education, Peshawar</em>
+                    <em>Government College Peshawar</em>
+                </li>
+                <li>
+                    <strong>Bachelor of Computer Engineering:</strong> (2024–2028)
+                    <em>NED University of Engineering and Technology</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+</body>
+</html>

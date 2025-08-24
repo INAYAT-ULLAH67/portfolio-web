@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>HOME-PAGE</title>
+</head>
+<body>
+
+<!-- Header contains only the navbar -->
+<header>
+    <div class="navbar">
+        <div class="myname">.Inayat</div>
+        <div class="menu">
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'about' %}" target="_blank" rel="noopener noreferrer">About</a>
+            <a href="{% url 'contact' %}" target="_blank" rel="noopener noreferrer">Contact</a>
+            <a href="{% url 'projects' %}" target="_blank" rel="noopener noreferrer">Projects</a>
+        </div>
+    </div>
+</header>
+<!-- Main content starts here -->
+<main>
+    <div class="profile">
+        <img src="static/profile-pic.png" alt="profile-picture" class="profile-picture">
+        <div class="introduction">
+            <div class="introduction-heading">
+                <h1>✨ Hi, I'm Inayat Ullah</h1>
+            </div>
+            <h2 class="profession">Undergraduate BE Computer System Engineer</h2>
+            <h2 class="skill-title-1">Python Developer</h2>
+<pre class="introduction-text">
+• Python Backend Engineering
+• Embedded Systems & IoT (Arduino/C)
+• Full-Stack Development
+⚙️ Bridging hardware & software innovation
+🏛️ NED University | Complex problems → Elegant solutions
+</pre>
+        </div>
+    </div>
+</main>
+<footer>
+    <footer>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/inayat-ullah-994847343" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1GM5Jm6aqh/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://x.com/InayatUlla58698?t=A5cPia3sH4LAk4X7ZWDgrA&s=09" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</footer>
+</body>
+</html>
+

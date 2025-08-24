@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'projects.css' %}">
+    <title>About-Page</title>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="myname">.Inayat</div>
+        <div class="menu">
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'projects' %}">Projects</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="projects-intro">
+        <h1 class="section-title">✨ MY PROJECTS</h1>
+        <p class="intro-text">
+            These are some of the projects I’ve built—ranging from full-stack web applications to
+            hardware circuits and desktop tools. Each one reflects my passion for clean code, responsive design, and solving real-world problems through creative engineering.
+        </p>
+    </section>
+<hr>
+    <section class="projects-list">
+        <div class="project-row">
+            <div class="project-card">
+                <h2 class="project-title">Portfolio Website</h2>
+                <p class="project-description">
+                    A fully responsive personal portfolio built with HTML, CSS, and Django. Features include device-specific styling, interactive hover effects, and with interactive contact page.
+                </p>
+                <a href="http://127.0.0.1:8000/" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2 class="project-title">Line Following Robot</h2>
+                <p class="project-description">
+                    An autonomous robot using IR sensors and Arduino logic to follow a black line with real-time decision-making.
+                </p>
+                <a href="https://www.linkedin.com/posts/inayat-shah-994847343_arduino-linefollowingrobot-robotics-activity-7350187141907288065-heKv?utm_source=share&utm_medium=member_android&rcm=ACoAAFYWiMABoh2wOeql9DTAwBrElpFkTriartg" target="_blank" class="project-link">Watch Robot</a>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-card">
+                <h2 class="project-title">Car Rental System (Django)</h2>
+                <p class="project-description">
+                    A full-stack Django web app for car rentals. Includes user registration, booking, payment, rental history, and admin fleet management.
+                </p>
+                <a href="https://www.linkedin.com/posts/inayat-shah-994847343_django-webdevelopment-carrentalsystem-activity-7323726379689156608-fmKK?utm_source=share&utm_medium=member_android&rcm=ACoAAFYWiMABoh2wOeql9DTAwBrElpFkTriartg" class="project-link">Demo|linkedin</a>
+            </div>
+
+            <div class="project-card">
+                <h2 class="project-title">Django Blog App</h2>
+                <p class="project-description">
+                    A blog platform with user authentication, CRUD operations, and responsive layout. Built using Django, Bootstrap, and SQLite.
+                </p>
+                <a href="https://getbootstrap.com/" class="project-link" target="_blank">Bootstrap</a>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-card">
+                <h2 class="project-title">Integrated Power Supply</h2>
+                <p class="project-description">
+                    A hardware project for regulated power output using electronic components. Designed for stable voltage and efficient load handling.
+                </p>
+                <a href="https://www.linkedin.com/in/inayat-shah-994847343" target="_blank" class="project-link">View Details|linkedin</a>
+            </div>
+
+            <div class="project-card">
+                <h2 class="project-title">Enhancement-Type MOSFET</h2>
+                <p class="project-description">
+                    This project explores the switching characteristics and gate control of an N-channel enhancement-mode MOSFET. Built on a vero board, it demonstrates how voltage at the gate modulates current flow, ideal for digital logic and power electronics applications.
+                </p>
+                <a href="https://www.electronicsforu.com/technology-trends/learn-electronics/n-channel-enhancement-mosfet-working-vi-graph" class="project-link">Want To Explore</a>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-card">
+                <h2 class="project-title">Arduino Temperature Monitor</h2>
+                <p class="project-description">
+                    A system using Arduino and C to measure and display temperature data. Includes serial communication and real-time monitoring.
+                </p>
+                <a href="https://www.allaboutcircuits.com/projects/monitor-temperature-with-an-arduino/" target="_blank" class="project-link">View Details</a>
+            </div>
+
+            <div class="project-card">
+                <h2 class="project-title">Controlling LEDs</h2>
+                <p class="project-description">
+                    Controlled single and multiple LEDs using Arduino. Explored blinking patterns, PWM brightness, and digital pin configuration.
+                </p>
+                <a href="{% static 'leds.mp4' %}" class="project-link" target="_blank">View Demo</a>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-card">
+                <h2 class="project-title">LCD & GLCD Integration</h2>
+                <p class="project-description">
+                    Displayed text and graphics using character LCDs and GLCDs with Arduino. Used LiquidCrystal and U8g2 libraries for rendering.
+                </p>
+                <a href="{% static 'lcd.mp4' %}" class="project-link" target="_blank">See Display</a>
+            </div>
+            <div class="project-card">
+                <h2 class="project-title">8×8 LED Matrix Cascade</h2>
+                <p class="project-description">
+                    Built a multi-panel LED matrix using MAX7219. Implemented scrolling text and custom patterns with cascading logic.
+                </p>
+                <a href="{% static 'matrix.mp4' %}" class="project-link" target="_blank">see|video</a>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-card">
+                <h2 class="project-title">Bluetooth RC Car</h2>
+                <p class="project-description">
+                    Built an RC car using Arduino, L298N, and HC-06 Bluetooth. Controlled via smartphone app with directional commands.
+                </p>
+            </div>
+            <div class="project-card">
+                <h2 class="project-title">SimpleDBMS with Tkinter</h2>
+                <p class="project-description">
+                    A desktop-based DBMS using Python and Tkinter. Includes file creation, field/record management, database listing, and search functionality.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

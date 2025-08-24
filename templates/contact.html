@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Page</title>
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="myname">.Inayat</div>
+        <div class="menu">
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'about' %}" target="_blank" rel="noopener noreferrer">About</a>
+            <a href="{% url 'contact' %}" target="_blank" rel="noopener noreferrer">Contact</a>
+            <a href="{% url 'projects' %}" target="_blank" rel="noopener noreferrer">Projects</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="outer">
+        <div class="box1">
+            <h1 class="box1-heading">Get in Touch</h1>
+            <p class="box1-paragraph">I'd love to hear from you!</p>
+            <p class="box1-main-paragraph">
+                Whether you have a question, a suggestion, or just want to say hello, feel free to use the contact form below.
+            </p>
+
+            <div class="message">
+                <i class="fa-solid fa-envelope-open"></i>
+                <a class="box1-button" href="mailto:ullah55.492@gmail.com">ullah55.492@gmail.com</a>
+            </div>
+
+            <div class="footer">
+                <a href="https://www.linkedin.com/in/inayat-ullah-994847343" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1GM5Jm6aqh/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://x.com/InayatUlla58698?t=A5cPia3sH4LAk4X7ZWDgrA&s=09" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="box2">
+            {% if messages %}
+                <div class="alert">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form action="{% url 'contact' %}" method="post" autocomplete="on">
+                {% csrf_token %}
+                <div class="form">
+                    <div class="fullName">
+                        <div class="field">
+                            <label for="firstName">First Name</label><br>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="lastName">Last Name</label><br>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="email">
+                        <label for="email">Email*</label><br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div class="txt-area">
+                        <label for="message">Message</label><br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <div class="submit-btn">
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>
