@@ -70,11 +70,11 @@ WSGI_APPLICATION = 'tecsec.wsgi.application'
 
 # Database configuration
 DATABASE_URL = os.environ.get('DATABASE_URL')
+from decouple import config
+import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(
-        default=DATABASE_URL,
-        conn_max_age=600,
-        conn_health_checks=True,
+        default='postgres://inayat_shah:Papa%231ani2@localhost:5432/portfolio_db'
     )
 }
 
