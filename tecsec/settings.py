@@ -70,15 +70,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tecsec.wsgi.application'
-# Database configuration - Simplified
-# Database configuration
-import os
-import dj_database_url
 
 # Database configuration
-import os
-import dj_database_url
-
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
     # Convert postgres:// to postgresql:// if needed
@@ -100,6 +93,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
